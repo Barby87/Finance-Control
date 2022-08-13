@@ -28,11 +28,17 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list {
+  width: 100%;
+}
+
+.list_element {
+  list-style: none;
+  width: 100%;
+}
+
+.list_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content:space-around;
 }
