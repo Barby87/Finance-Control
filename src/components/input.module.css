@@ -1,0 +1,11 @@
+.input {
+    border-radius: 21px;
+    border: 1px solid gray;
+    height: 2rem;
+    padding: 0 1rem;
+}
+
+.input::placeholder {
+    color: rgb(154, 122, 195);
+    font-style: italic;
+}

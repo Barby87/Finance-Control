@@ -1,5 +1,37 @@
+.container {
+    border-radius: 15px;
+    box-shadow: 6px 6px 20px rgba(201, 193, 214, 0.5);
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 60%;
+}
+
+.container::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+.container::-webkit-scrollbar-track{
+    background-color: #F1F0EE;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background-color: #bdbdbd;
+    border-radius: 10px;
+}
+
 .list_content {
     display: flex;
     min-width: 100%;
     justify-content: space-around;
 }
+
+.list_header {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-around;
+    padding: 1rem 0;
+    width: 100%;
+  }

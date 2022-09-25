@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { CountListContext } from '../contexts/CountListContext';
+import styles from './total-sum.module.css';
 
 const TotalSum = () => {
   const { countList } = useContext(CountListContext);
@@ -10,7 +11,7 @@ const TotalSum = () => {
     currency: 'CLP'
   }).format(totalSum)
   return (
-    <p>Total: {totalSum ? (<span>{totalSum}</span>) : 0}</p>
+    <p className={styles.text}>Total: {totalSum ? (<span>{totalSum}</span>) : <span>0</span>}</p>
   )
 }
 

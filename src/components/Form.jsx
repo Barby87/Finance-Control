@@ -1,11 +1,13 @@
 import React, {useContext, useState} from 'react'
 import { CountListContext } from '../contexts/CountListContext'
+import Input from './Input';
+import styles from './form.module.css';
 
 const Form = () => {
     const { setCountList } = useContext(CountListContext);
     const [formValues, setFormValues] = useState({
         countName: null,
-        countValue: null,
+        countValue: 0,
         countNumber: null
     })
 
@@ -30,17 +32,17 @@ const Form = () => {
         }));
     }
 
-const handleAddElement = (e) => {
-    e.preventDefault();
-    setCountList((prevState) => ([...prevState, formValues]))
-    document.getElementById("create-list-form").reset();
-    document.getElementById("inputName").focus();
-}
-  return (
-    <form id="create-list-form" onSubmit={(e) => handleAddElement(e)}>
-        <input placeholder="Nombre" onChange={(e) => handleChangeName(e)} id="inputName"/>
-            <input placeholder="Precio" onChange={(e) => handleChangePrice(e)}/>
-            <button type="submit">Agregar</button>
+    const handleAddElement = (e) => {
+        e.preventDefault();
+        setCountList((prevState) => ([...prevState, formValues]))
+        document.getElementById("create-list-form").reset();
+        document.getElementById("inputName").focus();
+    }
+return (
+    <form className={styles.form} id="create-list-form" onSubmit={(e) => handleAddElement(e)}>
+        <Input placeholder="Nombre" onChange={(e) => handleChangeName(e)} id="inputName"/>
+        <Input placeholder="Precio" onChange={(e) => handleChangePrice(e)}/>
+        <button type="submit">Agregar</button>
     </form>
   )
 }

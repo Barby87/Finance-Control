@@ -8,6 +8,7 @@ import Balance from './pages/Balance';
 import Blog from './pages/Blog';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Post from './pages/Post';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
           <Route path="costs" element={<Costs/>}/>
           <Route path="balance" element={<Balance/>}/>
           <Route path="blog" element={<Blog/>}/>
+          <Route path="blog/:id" element={<Post/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>

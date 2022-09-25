@@ -4,11 +4,12 @@ import Navbar from './components/Navbar';
 import { CountListContextProvider } from './contexts/CountListContext';
 
 function App() {
+  
   return (
    <CountListContextProvider>
       <div className="App">
         <Navbar/>
-        <div>
+        <div className="container">
           <Outlet/>
         </div>
       </div>
